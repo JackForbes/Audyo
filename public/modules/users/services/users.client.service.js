@@ -9,4 +9,10 @@ angular.module('users').factory('Users', ['$resource',
 			}
 		});
 	}
-]);
+]).factory('UsersModel', function() {
+  var factory = {};
+
+  factory.socialAccounts = ['facebook', 'twitter', 'google', 'linkedin', 'github'];
+
+  return factory;
+});

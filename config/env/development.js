@@ -31,6 +31,11 @@ module.exports = {
 		clientSecret: process.env.GITHUB_SECRET || 'a8675a621babed119d2a77740bce820ec2cd1daa',
 		callbackURL: '/auth/github/callback'
 	},
+	digital: {
+		clientID: process.env.DIGITAL_KEY || '7dkr2wrg7j3g',
+		clientSecret: process.env.DIGITAL_SECRET || '87kkysmmnumnvnfs',
+		callbackURL: '/7digital/callback'
+	},
 	mailer: {
 		from: process.env.MAILER_FROM || 'MAILER_FROM',
 		options: {

@@ -2,11 +2,11 @@
 	<div class="container-fluid">
 		<div class="row text-center playlistRow"
 			data-ng-repeat="playlist in playlists"
-			data-ng-click="showPlaylist = !showPlaylist"
+			data-ng-click="streamPlaylist($index); showPlaylist = !showPlaylist; currentPlaylist = $index"
 			data-ng-style="{'background-color':playlist.color}">
 			<div class="col-xs-12">{{playlist.name}}</div>
 			<div class="playSong">
-				<iframe data-ng-show="showPlaylist" data-ng-src="{{playlist.src | trustAsResourceUrl}}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+				<iframe data-ng-if="showPlaylist" data-ng-src="{{playlist.src | trustAsResourceUrl}}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 			</div>
 		</div>
 	</div>

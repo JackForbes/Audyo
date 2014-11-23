@@ -6,6 +6,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'Authent
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
     $scope.showPlaylist = false;
+    //$scope.currentPlaylist = 0;
 
     $scope.playlists = [
       {
@@ -60,6 +61,10 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'Authent
 
     ];
 
+    $scope.streamPlaylist = function(playlistIndex) {
+      console.log('inside stream');
+      $scope.currentPlaylist = playlistIndex;
+    }
 
     $scope.streamSong = function() {
       var term = $scope.searchTerm;

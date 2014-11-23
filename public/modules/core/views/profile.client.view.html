@@ -1,7 +1,11 @@
-<section data-ng-controller="ProfileController">
-  <div class="container-fluid">
+<section data-ng-controller="HomeController">
+  <div class="container-fluid profileContainer"
+    data-ng-style="{'background-color': playlists[currentPlaylist].color}">
     <div class="row text-center">
-      <div class="col-xs-12 text-center"></div>
+      <div class="col-xs-12 text-center">
+        <h1>Hi {{authentication.user.displayName}}</h1>
+        <img data-ng-src="{{authentication.user.providerData.picture}}">
+      </div>
     </div>
   </div>
 </section>

@@ -3,8 +3,34 @@
     data-ng-style="{'background-color': playlists[currentPlaylist].color}">
     <div class="row text-center">
       <div class="col-xs-12 text-center">
-        <h1>Hi {{authentication.user.displayName}}</h1>
-        <img data-ng-src="{{authentication.user.providerData.picture}}">
+        <img class="profilePic"
+          data-ng-show="authentication.user.providerData.picture"
+          data-ng-src="{{authentication.user.providerData.picture}}">
+        <h1>{{authentication.user.displayName}}</h1>
+        <div data-ng-show="authentication.user">
+          <a href="/#!/settings/profile">
+            <div class="profileLink">Edit Profile</div>
+          </a>
+          <a href="/#!/settings/accounts">
+            <div class="profileLink">Manage Accounts</div>
+          </a>
+          <a data-ng-show="authentication.user.provider === 'local'" href="/#!/settings/password">
+            <div class="profileLink">Change Password</div>
+          </a>
+          <a href="/auth/signout">
+            <div class="profileLink">Signout</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <h2>Interests</h2>
+        <div class="text-uppercase text-center interest"
+          data-ng-repeat="interest in authentication.user.interests"
+          data-ng-click="editInterests('sm', interest, authentication.user.interests)">
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> {{interest}}
+        </div>
       </div>
     </div>
   </div>

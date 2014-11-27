@@ -1,0 +1,16 @@
+<div class="modal-header">
+  <h3 class="modal-title">Edit Interest</h3>
+</div>
+<div class="modal-body">
+  <div class="list-group">
+    <div class="list-group-item text-center text-uppercase"
+      data-ng-repeat="interest in allInterests"
+      data-ng-class="getClass(interest)"
+      data-ng-click="selectInterest(interest)">{{ interest }}
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" data-ng-click="ok()">Save</button>
+  <button class="btn btn-warning" data-ng-click="cancel()">Cancel</button>
+</div>

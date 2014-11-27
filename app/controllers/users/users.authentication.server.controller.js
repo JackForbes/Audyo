@@ -24,7 +24,7 @@ exports.signup = function(req, res) {
 	user.provider = 'local';
 	user.displayName = user.firstName + ' ' + user.lastName;
 
-	// Then save the user 
+	// Then save the user
 	user.save(function(err) {
 		if (err) {
 			return res.status(400).send({
@@ -135,7 +135,8 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 							displayName: providerUserProfile.displayName,
 							email: providerUserProfile.email,
 							provider: providerUserProfile.provider,
-							providerData: providerUserProfile.providerData
+							providerData: providerUserProfile.providerData,
+							interests: ['mood', 'pop', 'travel']
 						});
 
 						// And save the user

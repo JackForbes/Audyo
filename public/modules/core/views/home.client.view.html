@@ -1,10 +1,11 @@
 <section data-ng-controller="HomeController">
 	<div class="container-fluid">
 		<div class="row text-center playlistRow"
-			data-ng-repeat="playlist in playlists"
+			data-ng-repeat="playlist in playlists track by $index"
 			data-ng-click="streamPlaylist($index); showPlaylist = !showPlaylist; currentPlaylist = $index"
 			data-ng-style="{'background-color':playlist.color}">
-			<div class="col-xs-12">{{playlist.name}}</div>
+			<div class="col-xs-12" data-ng-hide="$parent.konami">{{playlist.name}}</div>
+			<div class="col-xs-12" data-ng-show="$parent.konami">{{playlist.playlist}}</div>
 			<div class="playSong">
 				<iframe data-ng-if="showPlaylist" data-ng-src="{{playlist.src | trustAsResourceUrl}}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 			</div>

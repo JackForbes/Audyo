@@ -1,14 +1,26 @@
-.content {
-	margin-top: 50px;
+header {
+  margin: 0 !important;
+  padding: 3px;
+  background-color: #ecf0f1;
 }
-.outerContainer {
-  padding: 0;
+.headerContainer {
+  margin: 15px auto;
 }
-.undecorated-link:hover {
-	text-decoration: none;
+.headerContainer nav a {
+  color: #2c3e50;
+}
+.headerContainer nav a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.rightNav {
+  position: absolute;
+  right: 50px;
+  top: 34px;
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
+  display: none !important;
 }
 .ng-invalid.ng-dirty{
     border-color:#FA787E;
@@ -16,11 +28,49 @@
 .ng-valid.ng-dirty{
     border-color:#78FA89;
 }
+.noPadding {
+  padding: 0;
+}
+.appNameImg {
+  height: 100%;
+}
 .playlistRow {
   padding: 80px 10px;
   font-family: 'Freight Sans', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
   font-size: 36px;
+  color: white;
 }
 .profileContainer {
-
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #c0392b;
+  min-height: 100vh;
+  color: #ecf0f1;
+}
+.profilePic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+.profileLink {
+  display: inline-block;
+  background-color: #2c3e50;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  font-family: 'Freight Sans', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
+}
+.interestListItem:hover {
+  cursor: pointer;
+  background-color: #B2DDFF;
+}
+.interest {
+  font-family: 'Freight Sans', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
+  display: inline-block;
+  background-color: #ecf0f1;
+  margin: 10px;
+  padding: 10px;
+  color: black;
+  cursor: pointer;
 }

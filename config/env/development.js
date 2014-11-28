@@ -4,7 +4,7 @@ module.exports = {
 	db: 'mongodb://jack:BeSoMean@dogen.mongohq.com:10097/hearnow',
 	// db: 'mongodb://localhost/mean-dev',
 	app: {
-		title: 'MEAN.JS - Development Environment'
+		title: 'Audyo'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || '399827270181318',

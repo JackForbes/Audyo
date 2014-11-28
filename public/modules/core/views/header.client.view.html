@@ -1,14 +1,14 @@
-<div class="container headerContainer" data-ng-controller="HeaderController">
-	<div class="navbar-header">
-		<a href="/#!/" class="navbar-brand noPadding">
+<div class="headerContainer" data-ng-controller="HeaderController">
+	<div class="headerLogo">
+		<a href="/#!/" class="noPadding">
 			<img alt="Audyo" class="img-responsive text-center appNameImg" src="modules/core/img/brand/app-name-no-bg.png" />
 		</a>
 	</div>
-	<nav class="rightNav" data-ng-hide="authentication.user">
+	<div class="rightNav" data-ng-hide="authentication.user">
 		<a href="/#!/signup" ui-route="/signup" ng-class="{active: $uiRoute}">Sign Up</a>
 		<a href="/#!/signin" ui-route="/signup" ng-class="{active: $uiRoute}">Sign In</a>
-	</nav>
-	<nav class="rightNav" data-ng-show="authentication.user">
+	</div>
+	<div class="rightNav" data-ng-show="authentication.user">
 		<a href="/#!/profile">{{authentication.user.displayName}}</a>
-	</nav>
+	</div>
 </div>

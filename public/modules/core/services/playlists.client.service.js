@@ -79,7 +79,7 @@ function() {
         name: 'Glory',
         playlist: 'Sleep',
         src: 'https://embed.spotify.com/?uri=spotify:user:spotify:playlist:5UMleIsaNDK5LzZRbrbcXr',
-        color: '#BE90D4'
+        color: '#81CFE0'
       },
       {
         name: 'Rhinoceros',

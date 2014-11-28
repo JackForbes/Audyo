@@ -1,40 +1,35 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://jack:BeSoMean@dogen.mongohq.com:10097/hearnow',
-	// db: 'mongodb://localhost/mean-dev',
+	// db: 'mongodb://jack:BeSoMean@dogen.mongohq.com:10097/hearnow',
+	db: 'mongodb://localhost/mean-dev',
 	app: {
 		title: 'Audyo'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || '399827270181318',
-		clientSecret: process.env.FACEBOOK_SECRET || 'cb03edeb903104ca1221d5861f47d900',
+		clientID: process.env.FACEBOOK_ID || '730316797058028',
+		clientSecret: process.env.FACEBOOK_SECRET || 'be9124da1ece5bc114f27e8569c4176a',
 		callbackURL: '/auth/facebook/callback'
 	},
 	twitter: {
-		clientID: process.env.TWITTER_KEY || '4rfPLw6fWDDkkRPfa5C3YFEgi',
-		clientSecret: process.env.TWITTER_SECRET || 'Hyoxs4EsC1XYIrSX98Ov1TMaU7sOjdqUHckuvwjfSYMvrHwGl8',
+		clientID: process.env.TWITTER_KEY || 'zyJD8qwBPLyQJWmMyg76F17KA',
+		clientSecret: process.env.TWITTER_SECRET || 'mT7idPYC7MzvCU6n0YY5LgBvSHS1Zuf5v5rlTUKSSxcAhmZTjB',
 		callbackURL: '/auth/twitter/callback'
 	},
 	google: {
-		clientID: process.env.GOOGLE_ID || '354030878362-2oabfqgr3912ah5iiag2n5hqai0tub8e.apps.googleusercontent.com',
-		clientSecret: process.env.GOOGLE_SECRET || '1m38iRR2dFFYENR2q6tbQqtf',
+		clientID: process.env.GOOGLE_ID || '424754169069-1vlerjbslfu5hkt5jmdhiiifjivq9mgd.apps.googleusercontent.com',
+		clientSecret: process.env.GOOGLE_SECRET || 'R7wWGJN68P2imdOSAuKmHFRL',
 		callbackURL: '/auth/google/callback'
 	},
 	linkedin: {
-		clientID: process.env.LINKEDIN_ID || '77qd07i7lv81aa',
-		clientSecret: process.env.LINKEDIN_SECRET || 'wUkhIsO7r3VDN5dt',
+		clientID: process.env.LINKEDIN_ID || '78v1q1bx46lxvz',
+		clientSecret: process.env.LINKEDIN_SECRET || 'pKlryFdYo4cUg2kK',
 		callbackURL: '/auth/linkedin/callback'
 	},
 	github: {
-		clientID: process.env.GITHUB_ID || 'c4b1c31747be4d16377e',
-		clientSecret: process.env.GITHUB_SECRET || 'a8675a621babed119d2a77740bce820ec2cd1daa',
+		clientID: process.env.GITHUB_ID || '135f5e4bb343ade90726',
+		clientSecret: process.env.GITHUB_SECRET || '3d7fa2b6ea8fd2efa74ceaf5ef6899f9f5df4f4a',
 		callbackURL: '/auth/github/callback'
-	},
-	digital: {
-		clientID: process.env.DIGITAL_KEY || '7dkr2wrg7j3g',
-		clientSecret: process.env.DIGITAL_SECRET || '87kkysmmnumnvnfs',
-		callbackURL: '/7digital/callback'
 	},
 	mailer: {
 		from: process.env.MAILER_FROM || 'MAILER_FROM',
